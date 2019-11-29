@@ -1,42 +1,21 @@
-import React from "react"
+import React, { Component } from "react";
 
-function Joke (props){
-  console.log(props.quest);
-  if( typeof props.quest === 'undefined'){
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      name: "nitin",
+      age: 21
+    }
+  }
+  render(){
     return (
-      <p>
-        <b>Joke : {props.answe}</b>
-      </p>
+      <div>
+        <h1>{this.state.name}</h1>
+        <h3>{this.state.age} years old</h3>
+      </div>
     )
   }
-  else{
-    return (
-        <p>
-          <b>Question: {props.quest}</b> 
-            <br />Answer: {props.answe}
-        </p>
-    )
-  }
-}
-
-function App(){
-  return(
-    <div>
-      <Joke
-        quest="hello"
-        answe="world"
-      />
-      <Joke 
-        quest = "hi" answe = "dude"
-      />
-      <Joke 
-        quest = "aur" answe = "bol"
-      />
-      <Joke 
-        answe = "apna time ayega"
-      />
-    </div>
-  )
 }
 
 export default App
