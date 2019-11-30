@@ -46,7 +46,7 @@ class App extends Component{
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
             this.setState({
-               text: "time left is"+seconds+"s" //error line
+               text: "time left is "+seconds+"s"
             });
             if (distance < 0) {
               clearInterval(x);
